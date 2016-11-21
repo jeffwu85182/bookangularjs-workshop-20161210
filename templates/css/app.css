@@ -1,0 +1,63 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+body {
+  background: url("../images/bg.jpg") no-repeat;
+}
+
+/* TABLE THUMBNAIL
+----------------------------*/
+.thumbnail {
+  box-shadow: #0f0f0f 2px 2px 12px;
+}
+
+.thumbnail .caption h3 {
+  margin-top: 5px;
+}
+
+
+/* HISTORY
+----------------------------*/
+.history-log {
+  box-shadow: #0f0f0f 2px 2px 12px;
+}
+
+
+/* TABLE
+----------------------------*/
+.item-list {
+  margin-top: 10px;
+}
+
+.item-remove {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.item-remove:hover {
+  color: red;
+
+}
+
+.item-list-item {
+  transition: all 0.4s;
+}
+
+.item-list-item:hover{
+  z-index: 99;
+  box-shadow: #0f0f0f 2px 2px 10px;
+}
+
+.total-price {
+  text-align: right;
+  font-weight: bold;
+  background-color: #ffcbb3;
+}
+
+.dining-count {
+  width: 25%;
+}
+
+.table-comments {
+  resize: none;
+  margin-bottom: 10px;
+}
