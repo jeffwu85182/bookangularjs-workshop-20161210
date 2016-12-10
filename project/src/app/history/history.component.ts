@@ -1,3 +1,4 @@
+import { OrderService } from './../order.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./history.component.css']
 })
 export class HistoryComponent implements OnInit {
-
-  constructor() { }
+  orderData
+  constructor(private _orderService: OrderService) { 
+    this.orderData = this._orderService.mockData;
+  }
 
   ngOnInit() {
   }

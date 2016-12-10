@@ -3,17 +3,17 @@
 
   <!--START TABLE-->
   <div class="row">
-    <div class="col-md-3" *ngFor="let item of mockData; let i = index;">
+    <div class="col-md-3" *ngFor="let item of orderData; let i = index;">
       <div class="thumbnail">
         <div class="caption">
           <h4 class="pull-right"><span class="glyphicon glyphicon-time"></span>&nbsp; {{item.orderTime}}</h4>
-          <h3>Table #{{i}}</h3>
+          <h3>Table #{{i+1}}</h3>
           <h4><span class="glyphicon glyphicon-cutlery"></span>&nbsp; {{item.person}}</h4>
 
           <h4><span class="glyphicon glyphicon-usd"></span>&nbsp; {{item.orderPrice}}</h4>
 
           <p>
-            <a href="#" class="btn btn-info" role="button">
+            <a [routerLink]="['/table', i]" class="btn btn-info" role="button">
               <span class="glyphicon glyphicon-edit"></span>
             </a>
 

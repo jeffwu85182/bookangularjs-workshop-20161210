@@ -9,6 +9,8 @@ import { TablesComponent } from './tables/tables.component';
 import { TableDetailComponent } from './table-detail/table-detail.component';
 import { HistoryComponent } from './history/history.component';
 
+import { OrderService } from './order.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,7 @@ import { HistoryComponent } from './history/history.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

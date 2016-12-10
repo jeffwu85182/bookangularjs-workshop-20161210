@@ -14,22 +14,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>12:30</td>
-            <td>4</td>
-            <td>250</td>
-            <td>13:30</td>
-            <td>leave without saying hello</td>
-          </tr>
-
-          <tr>
-            <td>1</td>
-            <td>12:30</td>
-            <td>4</td>
-            <td>250</td>
-            <td>13:30</td>
-            <td>leave without saying hello</td>
+          <tr *ngFor="let item of orderData; let i = index;">
+            <td>{{i+1}}</td>
+            <td>{{item.orderTime}}</td>
+            <td>{{item.person}}</td>
+            <td>{{item.orderPrice}}</td>
+            <td>{{item.checkout}}</td>
+            <td>{{item.comment}}</td>
           </tr>
 
         </tbody>
