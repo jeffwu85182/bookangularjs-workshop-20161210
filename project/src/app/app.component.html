@@ -11,7 +11,7 @@
       <li><a [routerLink]="['/history']">history</a></li>
     </ul>
 
-    <button class="btn btn-default navbar-btn navbar-right">
+    <button *ngIf="_router.url === '/tables'" class="btn btn-default navbar-btn navbar-right" (click)=newTable()>
       ADD TABLE &nbsp;<span class="glyphicon glyphicon-plus"></span>
     </button>
 
