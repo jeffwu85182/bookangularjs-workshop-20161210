@@ -15,10 +15,11 @@ export class AppComponent {
 
   newTable() {
     let newTime = moment().format('HH:mm');
-    let checkout = moment(newTime).add(1, 'hours').format('HH:mm');
+    let checkout = moment().add(1, 'hours').format('HH:mm');
+    let people = Math.floor(Math.random() * 6) + 1;
     let obj: OrderData = {
       orderTime: newTime,
-      person: 0,
+      person: people,
       orderPrice: 0,
       checkout: checkout,
       comment: '',
