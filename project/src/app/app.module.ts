@@ -5,10 +5,16 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { TablesComponent } from './tables/tables.component';
+import { TableDetailComponent } from './table-detail/table-detail.component';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TablesComponent,
+    TableDetailComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
