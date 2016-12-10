@@ -30,17 +30,13 @@
 
           <div class="form-group">
             <label for="item">Add Item:</label>
-            <select id="item" class="form-control">
-                <option>Coffee</option>
-                <option>Cake</option>
-                <option>Salad</option>
-                <option>Drink</option>
-                <option>Desert</option>
+            <select id="item" name="selectProd" class="form-control" [(ngModel)]="selectProd">
+                <option *ngFor="let product of productList; let i = index" [value]="i">{{product.productName}}</option>
               </select>
           </div>
 
           <div class="form-group">
-            <button class="btn btn-success form-control">add</button>
+            <button class="btn btn-success form-control" (click)="add()">add</button>
           </div>
 
         </form>
@@ -49,29 +45,24 @@
         <!-- ITEM LIST -->
         <ul class="list-group item-list">
 
-          <li class="list-group-item item-list-item">
-            <span class="badge item-price">14&nbsp; $</span>
-            <span class="item-remove glyphicon glyphicon-remove"></span> Coffee
-          </li>
-
-          <li class="list-group-item item-list-item">
-            <span class="badge item-price">14&nbsp; $</span>
-            <span class="item-remove glyphicon glyphicon-remove"></span> Cake
+          <li class="list-group-item item-list-item" *ngFor="let item of tableInfo.itemList; let i = index;">
+            <span class="badge item-price">{{item.price}}&nbsp; $</span>
+            <span class="item-remove glyphicon glyphicon-remove" (click)="remove(i)"></span> {{item.itemName}}
           </li>
 
           <li class="list-group-item total-price">
-            <span><span class="glyphicon glyphicon-usd"></span>28</span>
+            <span><span class="glyphicon glyphicon-usd"></span>{{totalPrice}}</span>
           </li>
 
         </ul>
 
-        <textarea class="form-control table-comments" placeholder="comments"></textarea>
+        <textarea class="form-control table-comments" name="comment" placeholder="comments" [(ngModel)]="tableInfo.comment"></textarea>
 
 
         <!-- ACTION BUTTONS -->
         <div class="pull-right">
 
-          <button class="btn btn-info">
+          <button class="btn btn-info" (click)="saveOrder()">
               <span class="glyphicon glyphicon-ok"></span>
               DONE
             </button>

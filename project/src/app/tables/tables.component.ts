@@ -9,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class TablesComponent implements OnInit {
   orderData;
   constructor(private _orderService: OrderService ) {
-    this.orderData = this._orderService.mockData;
+    
    }
 
   ngOnInit() {
+    this.orderData = this._orderService.mockData;
   }
 
 
